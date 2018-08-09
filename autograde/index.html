@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Grade Retriever - BluSpring Official Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>-->
+    </head>
+    <body>
+        <h1>This is a simple grade retriever. It's so simple, I'm not even styling this thing.</h1>
+        <input id="mark-input" type="text" name="mark-input" placeholder="Enter marks">
+        <button id="submit-marks" type="button">Get results!</button>
+        <h3>You should get your marks below.</h3>
+        <h4 id="output-thing">Awaiting input...</h4>
+
+        <script>
+            var marks = document.getElementById('mark-input');
+            var submitMarks = document.getElementById('submit-marks');
+            var outputThing = document.getElementById('output-thing');
+
+            submitMarks.onclick = giveOutput;
+
+            function giveOutput() {
+                var markAmt = Math.floor(parseInt(marks.value));
+
+                if(marks.value == '0')
+                    return outputThing.innerHTML = 'Grade: F (Fail)';
+                if(!markAmt || markAmt == '' || isNaN(markAmt))
+                    return outputThing.innerHTML = 'No input received, or input is not a number!';
+                
+                var otpt = outputThing.innerHTML;
+                if(markAmt > 79)
+                    return outputThing.innerHTML = 'Grade: A';
+                else if(markAmt > 69)
+                    return outputThing.innerHTML = 'Grade: B';
+                else if(markAmt > 59)
+                    return outputThing.innerHTML = 'Grade: C';
+                else if(markAmt > 49)
+                    return outputThing.innerHTML = 'Grade: D';
+                else if(markAmt > 39)
+                    return outputThing.innerHTML = 'Grade: E (Fail)';
+                else if(markAmt > -1)
+                    return outputThing.innerHTML = 'Grade: F (Fail)';
+                else if(markAmt < 0)
+                    return outputThing.innerHTML = 'Grade can not be a negative number!';
+                else
+                    return outputThing.innerHTML = 'Error during grade retrieval!';
+            };
+        </script>
+    </body>
+</html>
