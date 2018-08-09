@@ -31,6 +31,8 @@
                     return outputThing.innerHTML = 'No input received, or input is not a number!';
                 
                 var otpt = outputThing.innerHTML;
+                if(markAmt > 100)
+                    return outputThing.innerHTML = 'Grade is over 100, that is impossible!';
                 if(markAmt > 79)
                     return outputThing.innerHTML = 'Grade: A';
                 else if(markAmt > 69)
