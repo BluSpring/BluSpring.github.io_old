@@ -1,0 +1,12 @@
+#merd {
+    color: red;
+    position: absolute;
+}
+#logger {
+    position: absolute;
+    color: green;
+}
+img.mflag {
+    width: 100%;
+    height: 100%;
+}
