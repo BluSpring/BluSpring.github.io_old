@@ -1,0 +1,182 @@
+@font-face {
+    font-family: UniSans;
+    font-weight: 300;
+    src: url(../font/UniSansHeavy.otf);
+}
+
+@font-face {
+    font-family: UniSansItalics;
+    font-weight: 300;
+    src: url(https://xeriapps.github.io/uni-sans-heavy-italic-caps.otf);
+}
+
+@font-face {
+    font-family: DeterminationSans;
+    font-weight: 300;
+    src: url(https://xeriapps.github.io/determinationsansweb-webfont.woff) format('woff');
+}
+
+.dashHead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(112, 0, 0);
+    width: 100%;
+    height: 42%;
+}
+
+.rekrastik-pfp {
+    border: 4px solid white;
+    border-radius: 50%;
+    position: fixed;
+    width: 240px;
+    height: 240px;
+    left: 40%;
+    top: 2%;
+    transition: .4s ease-out;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.rekrastik-text {
+    font-family: UniSans;
+    font-size: 58px;
+    color: aqua;
+    position: fixed;
+    left: 13%;
+    top: 8%;-webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.dashboard-text {
+    font-family: UniSans;
+    font-size: 58px;
+    color: blue;
+    position: fixed;
+    right: 23%;
+    top: 8%;-webkit-user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+body {
+    background-color: rgb(34, 31, 31);
+}
+
+a {
+    text-decoration: none;
+}
+
+.dropdown {
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    transition: width .7s, filter .7s;
+    background-color: rgb(0, 0, 0, 0.6);
+    position: fixed;
+    width: 4%;
+    height: 100%;
+    left: 0;
+}
+
+.dropdownMenuOut {
+    transition: width .7s, filter .7s;
+    background-color: rgb(0, 0, 0, 0.6);
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    left: 0%;
+}
+
+.dropdownMenuOut .dropdownText {
+    position: fixed;transition: left .7s, filter .7s;
+    color: white;
+    top: 20%;
+    left: 1%;
+    font-size: 26px;
+    font-family: UniSans;
+    -webkit-user-drag: none;-webkit-user-select: none;
+    cursor: pointer;
+}
+
+.dropdownMenu .dropdownText {
+    transition: left .7s, filter .7s;
+    position: fixed;
+    color: white;
+    top: 20%;
+    left: -15%;
+    font-size: 26px;
+    font-family: UniSans;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;cursor: pointer;
+}
+
+.dropdownMenuOut .dropdownText2 {
+    position: fixed;transition: left .7s, filter .7s;
+    color: white;
+    top: 27%;
+    left: 1%;
+    font-size: 26px;
+    font-family: UniSans;
+    -webkit-user-drag: none;-webkit-user-select: none;
+    cursor: pointer;
+}
+
+.dropdownMenu .dropdownText2 {
+    transition: left .7s, filter .7s;
+    position: fixed;
+    color: white;
+    top: 27%;
+    left: -15%;
+    font-size: 26px;
+    font-family: UniSans;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;cursor: pointer;
+}
+
+.dropdownMenuOut .dropdownText3 {
+    position: fixed;transition: left .7s, filter .7s;
+    color: white;
+    top: 34%;
+    left: 1%;
+    font-size: 26px;
+    font-family: UniSans;
+    -webkit-user-drag: none;-webkit-user-select: none;
+    cursor: pointer;
+}
+
+.dropdownMenu .dropdownText3 {
+    transition: left .7s, filter .7s;
+    position: fixed;
+    color: white;
+    top: 34%;
+    left: -15%;
+    font-size: 26px;
+    font-family: UniSans;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;cursor: pointer;
+}
+
+.aboutTextH {
+    color: red;
+    font-family: UniSansItalics;
+    font-size: 48px;
+    position: fixed;
+    top: 42%;
+    left: 44%;
+}
+
+.aboutText {
+    color: white;
+    font-family: DeterminationSans;
+    font-size: 24px;
+    position: fixed;
+    top: 58%;
+    left: 2%;
+}
