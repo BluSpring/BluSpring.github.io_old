@@ -1,63 +1,37 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Test Site</title>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<h1 id="merd" style="display: none;">MERDEKA!</h1>
-		<br><br>
-		<p id="logger"></p>
-		<!--<img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg" class="mflag">
-		-->
-		<script>
-			var amt = 0;
-			var originLogs = 0;
-			var logs = [];
-			var logging = true;
-			logs.push(`[${new Date().toString()}] Booted webpage.`);
-			logs.push(`[${new Date().toString()}] Origin amt: ${amt}`);
-			logs.push(`[${new Date().toString()}] Logging: ${logging}`);
-			/*for(amt = 0; amt < 3; amt++) {
-				document.getElementById('merd').style.display = "block";
-				logs.push(`[${new Date().toString()}] Set style display of "merd" to "block"`);
-				//amt++;
-				logs.push(`[${new Date().toString()}] Set variable "amt" to "${amt}"`);
-				setTimeout(function() {
-					document.getElementById('merd').style.display = "none";
-					logs.push(`[${new Date().toString()}] Set style display of "merd" to "none"`);
-				}, 2000);
-			}*/
-			setInterval(function(crx) {
-				if(logging == true) {
-					document.getElementById('logger').innerHTML = logs.join('<br>');
-				}
-				if(originLogs == logs.length) return;
-				console.log(logs[logs.length - 1]);
-				originLogs++;
-			}, 1);
-			
-			const ctr = setInterval(function(cr) {
-				logs.push(`[${new Date().toString()}] Interval started!`);
-				if(amt < 3) {
-					//var curTime = new Date().toString();
-					document.getElementById('merd').style.display = "block";
-					logs.push(`[${new Date().toString()}] Set style display of "merd" to "block"`);
-					amt++;
-					logs.push(`[${new Date().toString()}] Set variable "amt" to "${amt}"`);
-					setTimeout(function() {
-						document.getElementById('merd').style.display = "none";
-						logs.push(`[${new Date().toString()}] Set style display of "merd" to "none"`);
-					}, 2000);
-				} else {
-					logs.push(`[${new Date().toString()}] Variable "amt" is above "3", returned!`);
-					return vtr();
-				};
-			}, 3000);
-			function vtr() {
-				logs.push(`[${new Date().toString()}] Cleared interval ctr!`);
-				clearInterval(ctr);
-			}
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BluSpring Official Website</title>
+    <link href="./assets/icons/main.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/core.js"></script>
+    <link rel="stylesheet" href="css/font-awesome-pro.css">
+</head>
+<body>
+    <div class="desktop" id="desktop" style="display:block;">
+        <div class="dashHead">
+            <img src="https://yt3.ggpht.com/-KOn-hJPwwTk/AAAAAAAAAAI/AAAAAAAAACQ/hTvhWHaUAso/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg" class="rekrastik-pfp">
+            <h1 class="rekrastik-text">BluSpring's</h1>
+            <h1 class="dashboard-text">Website</h1>
+            <section id="about">
+                <h4 class="aboutTextH">About</h4>
+                <p class="aboutText" id="aboutText"></p>
+            </section>
+            <div class="dropdownMenu" id="dropdownMenu">
+                <a class="dropdownText" href="#"><i class="fas fa-home"></i> Home</a>
+                <a class="dropdownText2" href="https://discord.gg/dNN4azK"><i class="fab fa-discord"></i> Discord</a>
+                <a class="dropdownText3" href="#about"><i class="fal fa-info-circle"></i> About</a>
+            </div>
+            <a class="dropdown" id="dropBtn" onclick="revealDrop()"><i class="far fa-bars"></i></a>
+        </div>
+
+    </div>
+    <div class="mobile" id="mobile" style="display:none;">
+    </div>
+</body>
 </html>
